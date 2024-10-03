@@ -1,0 +1,12 @@
+#boton-crear-repo {
+    background-color: #4CAF50; /* Verde */
+    color: #ffffff; /* Blanco */
+    padding: 10px 20px; /* Espacio entre el texto y el borde */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor a una mano */
+}
+
+#boton-crear-repo:hover {
+    background-color: #3e8e41; /* Verde oscuro */
+}
