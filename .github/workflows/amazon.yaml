@@ -17,7 +17,7 @@ jobs:
           ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
       - name: Despliegue en Lightsail
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@34.238.80.206 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@54.196.80.19 << 'EOF'
           cd /var/www/html
           sudo rm -rf *
           git clone https://github.com/Jesus75981/Paginaweb.git .
