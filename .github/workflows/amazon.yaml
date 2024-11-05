@@ -19,7 +19,7 @@ jobs:
       - name: Despliegue en Lightsail
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@34.238.80.206 << 'EOF'
-            cd /var/www/html
-            sudo rm -rf *
-            git clone https://github.com/Jesus75981/Paginaweb.git
+          cd /var/www/html
+          sudo rm -rf *
+          git clone https://github.com/Jesus75981/Paginaweb.git .
           EOF
