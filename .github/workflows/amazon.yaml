@@ -1,0 +1,25 @@
+name: Deploy en AWS Lightsail
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Configurar conexión SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+      - name: Despliegue en Lightsail
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@34.238.80.206 << 'EOF'
+            cd /var/www/html
+            sudo rm -rf *
+            git clone https://github.com/Jesus75981/Paginaweb.git
+          EOF
