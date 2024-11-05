@@ -14,8 +14,7 @@ jobs:
       - name: Configurar conexión SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        
+          ssh-private-key: ${{secrets.SSH_PRIVATE_KEY}}
       - name: Despliegue en Lightsail
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@34.238.80.206 << 'EOF'
