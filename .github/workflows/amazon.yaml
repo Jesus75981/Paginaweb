@@ -19,7 +19,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@54.196.80.19 << 'EOF'
           cd /var/www/html
-          # sudo rm -rf *
+          sudo rm -rf *
           if [ -d ".git" ]; then
               git pull origin main
           else
