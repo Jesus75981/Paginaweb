@@ -19,6 +19,10 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@54.196.80.19 << 'EOF'
           cd /var/www/html
-          sudo rm -rf *
-          git clone https://github.com/Jesus75981/Paginaweb.git .
+          # sudo rm -rf *
+          if [ -d ".git" ]; then
+              git pull origin main
+          else
+            git clone https://github.com/Jesus75981/Paginaweb.git .
+          fi
           EOF
