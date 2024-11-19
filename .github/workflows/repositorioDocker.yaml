@@ -20,11 +20,11 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t PracticaYisus . 
+          docker build -t practicayisus . 
 
       - name: Push Docker Image to Docker Hub 
         run: |
-          docker tag PracticaYisus ${{ secrets.DOCKERHUB_USERNAME }}/PracticaYisus:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/PracticaYisus:latest
+          docker tag practicayisus ${{ secrets.DOCKERHUB_USERNAME }}/practicayisus:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/practicayisus:latest
 
 
